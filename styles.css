@@ -27,12 +27,14 @@ body, html {
     z-index: 1;
 }
 
-input {
-    width: 90%;
+textarea {  /* ✅ Updated input box to textarea */
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    resize: vertical;  /* Allows users to resize if needed */
+    font-size: 16px;
 }
 
 button {
