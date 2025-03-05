@@ -1,10 +1,10 @@
 function checkFraud() {
     let text = document.getElementById("inputText").value;
 
-    fetch("http://127.0.0.1:5000/check", {  // ✅ Correct URL
-        method: "POST",                      // ✅ Using POST request
+    fetch("https://sms-detector.onrender.com/check", {  // ✅ Use live backend
+        method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text }) // ✅ Sending JSON data
+        body: JSON.stringify({ message: text })  // ✅ Sending JSON data
     })
     .then(response => response.json())
     .then(data => { 
