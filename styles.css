@@ -27,14 +27,33 @@ body, html {
     z-index: 1;
 }
 
-textarea {  /* ✅ Updated input box to textarea */
+/* ✅ Gradient Text Animation */
+.gradient-text {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00, #0000ff, #8000ff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s infinite linear;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ✅ Adjusted Textbox to Move Slightly Left */
+textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    resize: vertical;  /* Allows users to resize if needed */
+    resize: vertical;
     font-size: 16px;
+    transform: translateX(-10px); /* Moves the textbox slightly left */
 }
 
 button {
